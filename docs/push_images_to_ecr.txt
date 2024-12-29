@@ -1,0 +1,10 @@
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 720284872361.dkr.ecr.us-east-2.amazonaws.com
+
+docker tag user-service:latest 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/user-service:latest
+docker push 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/user-service:latest
+
+docker tag order-service:latest 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/order-service:latest
+docker push 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/order-service:latest
+
+docker tag payment-service:latest 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/payment-service:latest
+docker push 720284872361.dkr.ecr.us-east-2.amazonaws.com/cicd_with_iac/payment-service:latest
